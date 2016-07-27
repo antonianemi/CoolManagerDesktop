@@ -1,0 +1,72 @@
+﻿<Window x:Class="CoolManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cool Manager Torrey v2.1" Height="521" Width="850" Closing="Closing_App" ResizeMode="CanMinimize">
+    
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Images/Comun/FondoLuz1024x699.png"/>
+    </Window.Background>
+    
+    <Grid Margin="0,76,0,1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="155"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="348" VerticalAlignment="Top" Width="132" Margin="10,10,0,0">
+            <Grid Height="50">
+                <Label VerticalContentAlignment="Center" Height="50" Content="Devices"  FontSize="20" FontFamily="Segoe UI Light" Background="#FF363434" Foreground="White" MouseLeftButtonUp="Search_Click" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353"/>
+                <Line x:Name="LineSearch" X1="5" Y1="40"  X2="120" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            <Grid x:Name="GridTemperature" Height="50">
+                <Label VerticalContentAlignment="Center" Content="Temperature" Height="50" FontFamily="Segoe UI Light" FontSize="20" Background="#FF363434" Foreground="White" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353" MouseLeftButtonUp="Temperature_Click"/>
+                <Line x:Name="LineTemperature" X1="5" Y1="40"  X2="120" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            <Grid x:Name="GridLogs" Height="50">
+                <Label x:Name="GridLogsText" VerticalContentAlignment="Center" Content="Logs" Height="50" FontFamily="Segoe UI Light" FontSize="20" Background="#FF363434" Foreground="White" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353" MouseLeftButtonUp="Logs_Click"/>
+                <Line x:Name="LineLogs" X1="5" Y1="40"  X2="120" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            <Grid x:Name="GridSettings" Height="50">
+                <Label VerticalContentAlignment="Center" Content="Settings" Height="50" FontFamily="Segoe UI Light" FontSize="20" Background="#FF363434" Foreground="White" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353" MouseLeftButtonUp="Settings_Click"/>
+                <Line x:Name="LineSettings" X1="5" Y1="40"  X2="120" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            <Grid x:Name="GridServices" Height="50">
+                <Label VerticalContentAlignment="Center" Content="Service" Height="50" FontFamily="Segoe UI Light" FontSize="20" Background="#FF363434" Foreground="White" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353" MouseLeftButtonUp="Services_Click"/>
+                <Line x:Name="LineServices" X1="5" Y1="40"  X2="120" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            <!--
+            <Grid x:Name="GridDisplay" Height="50">
+                <Label Content="Display" Height="50" FontFamily="Segoe UI Light" FontSize="20" VerticalAlignment="Top" VerticalContentAlignment="Center" Background="#FF363434" Foreground="White" BorderThickness="0,0,0,1" BorderBrush="#FF5B5353" MouseLeftButtonUp="Display_Click"/>
+                <Line x:Name="LineDisplay" X1="5" Y1="40"  X2="170" Y2="40" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            </Grid>
+            -->
+        </StackPanel>
+        <Grid HorizontalAlignment="Left" Height="66" Margin="0,-77,0,0" VerticalAlignment="Top" Width="833" Grid.ColumnSpan="2">
+            <Rectangle Fill="#FF363434" HorizontalAlignment="Left" Height="67" Stroke="Black" VerticalAlignment="Top" Width="228" StrokeThickness="0"/>
+            <Image HorizontalAlignment="Left" Height="67" Width="78" Source="Resources/Images/Iconos/Icon-76@2x.png" VerticalAlignment="Top" Margin="0,0,0,-1"/>
+            <Label x:Name="title" Content="Devices" HorizontalAlignment="Left" Margin="228,0,-12,0" VerticalAlignment="Top" Height="67" Width="614" Background="#FF363434" FontFamily="Segoe UI Light" FontSize="36" VerticalContentAlignment="Center" Foreground="White" Padding="5,5,0,5"/>
+        </Grid>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="403" Margin="0,10,0,0" VerticalAlignment="Top" Width="678">
+            <Frame Content="" HorizontalAlignment="Left" Height="350" Margin="10,0,0,0" VerticalAlignment="Top" Width="655" Background="#CC363434"/>
+            <ContentControl x:Name="ContentArea" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="350" Width="655" Foreground="#FFFDFDFD" Grid.IsSharedSizeScope="True"/>           
+        </Grid>
+
+
+        <ContentControl x:Name="ContentMessages" Content="" HorizontalAlignment="Left" Margin="0,-77,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="490" Width="842" IsHitTestVisible="False"/>
+
+        <StackPanel  Margin="0,373,0,-1" Orientation="Horizontal" Grid.ColumnSpan="2" Background="#FF363434" >
+            <Image Width="54" Source="Resources/Images/Comun/childish_Help.png" MouseLeftButtonUp="HelpIcon_Click" />
+            <Label Width="161" />
+            <Grid Width="627" x:Name="ConnectionDataLayer">
+                <Label VerticalContentAlignment="Center" Content="CHA" FontFamily="Segoe UI Light" FontSize="15" Foreground="CYAN"  MouseLeftButtonUp="Services_Click" Margin="0,0,585,0" />
+                <Label x:Name="ChamberTemperature" VerticalContentAlignment="Center" Content="88 °F" FontFamily="Segoe UI Light" FontSize="15" Background="Gray" Foreground="Cyan"  MouseLeftButtonUp="Services_Click"  HorizontalContentAlignment="Center" Margin="47,0,520,0"/>
+                <Label x:Name="ValueDeviceName" VerticalContentAlignment="Center" Content="Device Name - CTX" FontFamily="Segoe UI Light" FontSize="15" Foreground="White"  MouseLeftButtonUp="Services_Click" Margin="121,0,258,0" />
+                <Label VerticalContentAlignment="Center" Content="EVA" FontFamily="Segoe UI Light" FontSize="15" Foreground="CYAN"  MouseLeftButtonUp="Services_Click" Margin="498,0,85,0" RenderTransformOrigin="2,0.524"  />
+                <Label x:Name="EvaporatorTemperature" VerticalContentAlignment="Center" Content="88 °F" FontFamily="Segoe UI Light" FontSize="15" Background="Gray" Foreground="Cyan"  MouseLeftButtonUp="Services_Click"  HorizontalContentAlignment="Center" Margin="547,0,21,0"/>           
+            </Grid>
+        </StackPanel>
+
+        <ContentControl x:Name="ContentDialogs" Content="" HorizontalAlignment="Left" Margin="0,-77,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="490" Width="842" IsHitTestVisible="False"/>
+        <ContentControl x:Name="ContentWaitBar" Content="u" HorizontalAlignment="Left" Margin="0,-77,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="490" Width="842" IsHitTestVisible="False"/>
+
+    </Grid>
+</Window>

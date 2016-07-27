@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CoolManager.TemperatureControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="655" Height="350">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid HorizontalAlignment="Left" Width="655" Margin="0">
+        <Image x:Name="ImgCelsius" HorizontalAlignment="Left" Height="72" Margin="433,107,0,0" VerticalAlignment="Top" Width="140" Source="{DynamicResource ImgTemperaturaCrojo}" PreviewMouseLeftButtonUp="ImgCelsius_ButtonUp"/>
+        <Image x:Name="ImgFharenheit" HorizontalAlignment="Left" Height="70" Margin="433,37,0,0" VerticalAlignment="Top" Width="140" Source="{DynamicResource ImgTemperaturaFgris}" MouseLeftButtonUp="ImgFharenheit_ButtonUp"/>
+        <Image x:Name="ImgArrUp" HorizontalAlignment="Left" Height="66" Margin="420,208,0,0" VerticalAlignment="Top" Width="77" Source="{DynamicResource ImgTemperaturaArrUpGreen}"  MouseLeftButtonUp="ImgArrUp_ButtonUp" MouseLeftButtonDown="ImgArrUp_ButtonDown" MouseLeave="ImgArrUp_ButtonOut"/>
+        <Image x:Name="ImgArrDwon" HorizontalAlignment="Left" Height="66" Margin="420,274,0,0" VerticalAlignment="Top" Width="77" Source="{DynamicResource ImgTemperaturaArrDownGreen}"  MouseLeftButtonUp="ImgArrDown_ButtonUp" MouseLeftButtonDown="ImgArrDown_ButtonDown" MouseLeave="ImgArrDown_ButtonOut"/>
+        <Label x:Name="SetPoint" Content="- 12.5 °C" HorizontalAlignment="Left" Margin="478,235,0,0" VerticalAlignment="Top" Height="62" Width="157" FontFamily="Segoe UI Light" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="35" Foreground="White"/>
+        <Label x:Name="ChamberTemperature" Content="88 °F" HorizontalAlignment="Left" Margin="53,68,0,0" VerticalAlignment="Top" Height="104" Width="279" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="60" RenderTransformOrigin="0.89,0.469"/>
+        <Label Content="Set Point" HorizontalAlignment="Left" Margin="468,190,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22"/>
+        <Label Content="Chamber Temperature" HorizontalAlignment="Left" Margin="67,23,0,0" VerticalAlignment="Top" Height="45" Width="234" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.509,-0.156"/>
+        <Label Content="Indicators" HorizontalAlignment="Left" Margin="37,189,0,0" VerticalAlignment="Top" Height="45" Width="162" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22"/>
+        <Image x:Name="ImgDoorOpen" HorizontalAlignment="Left" Height="49" Margin="37,259,0,0" VerticalAlignment="Top" Width="67" Source="{DynamicResource ImgTemperaturaDoorOpenOFF}" RenderTransformOrigin="0.567,0.122"/>
+        <Image x:Name="ImgDefrost" HorizontalAlignment="Left" Height="49" Margin="104,259,0,0" VerticalAlignment="Top" Width="55" Source="{DynamicResource ImgTemperaturaDefrostOFF}" RenderTransformOrigin="-6.091,0.306" />
+        <Image x:Name="ImgTools" HorizontalAlignment="Left" Height="49" Margin="164,259,0,0" VerticalAlignment="Top" Width="55" Source="{DynamicResource ImgTemperaturaToolsOFF}"  RenderTransformOrigin="-0.091,0.449"/>
+        <Image x:Name="ImgModes" HorizontalAlignment="Left" Height="123" Margin="251,217,0,0" VerticalAlignment="Top" Width="128" Source="{DynamicResource ImgTemperaturaModeEco}"  MouseLeftButtonUp="ImgModes_ButtonUp" RenderTransformOrigin="0.938,0.268"/>
+        <Label Content="Unit" HorizontalAlignment="Left" Margin="433,0,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22"/>
+        <Label Content="Mode" HorizontalAlignment="Left" Margin="251,188,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.3,0.556"/>
+        <Label x:Name="ImgSendSetPont" Content="Send" HorizontalAlignment="Left" Margin="499,286,0,0" VerticalAlignment="Top" Height="54" Width="122" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="ImgSendSetPoint_ButtonUp" MouseLeftButtonDown="ImgSendSetPoint_ButtonDown" MouseLeave="ImgSendSetPoint_ButtonOut" RenderTransformOrigin="0.852,0.463">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgTemperaturaSendSetPointGreen}"/>
+            </Label.Background>
+        </Label>
+    </Grid>
+</UserControl>

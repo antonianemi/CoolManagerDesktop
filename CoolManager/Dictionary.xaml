@@ -1,0 +1,42 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Search Control-->
+    <ImageSource x:Key="ImgSearchAzul">Resources/Images/Buscar/btn_Search_Azl.png</ImageSource>
+    <ImageSource x:Key="ImgSearchVerde">Resources/Images/Buscar/btn_Search_Vrd.png</ImageSource>
+    <ImageSource x:Key="ImgSearchChange">Resources\Images\Buscar\btn_Change_Y.png</ImageSource>
+
+    <!-- Temperature Control-->
+    <ImageSource x:Key="ImgTemperaturaFgris">Resources\Images\CambioUnidades\c_gris.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaCrojo">Resources\Images\CambioUnidades\c_rojo.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaFazul">Resources\Images\CambioUnidades\f_azul.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaCgris">Resources\Images\CambioUnidades\f_gris.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaArrDownBlue">Resources\Images\TempSetPoint\arr_down_blue.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaArrDownGreen">Resources\Images\TempSetPoint\arr_down_green.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaArrUpGreen">Resources\Images\TempSetPoint\arr_up_green.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaArrUpRed">Resources\Images\TempSetPoint\arr_up_red.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaDefrostON">Resources\Images\Indicators\in_DEFROST.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaDefrostOFF">Resources\Images\Indicators\in_DEFROST_G.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaDoorOpenON">Resources\Images\Indicators\in_DOOROPEN.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaDoorOpenOFF">Resources\Images\Indicators\in_DOOROPEN_G.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaToolsON">Resources\Images\Indicators\in_TOOLS.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaToolsOFF">Resources\Images\Indicators\in_TOOLS_G.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaModeEco">Resources\Images\Modes\btn_ECOAUTO.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaModeFoco">Resources\Images\Modes\btn_FOCO.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaModeFocoOff">Resources\Images\Modes\btn_FOCOoff.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaIcoModeEco">Resources\Images\Modes\ico_EcoAUTO.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaIcoModeFoco">Resources\Images\Modes\ico_FOCO.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaIcoModeFocoOff">Resources\Images\Modes\ico_FOCOoff.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaSendSetPointGreen">Resources\Images\Buscar\btn_Send_W100.png</ImageSource>
+    <ImageSource x:Key="ImgTemperaturaSendSetPointRed">Resources\Images\Buscar\btn_Send_R.png</ImageSource>
+
+    <!-- Relays Control-->
+    <ImageSource x:Key="ImgRelaysOn">Resources\Images\Service\btn_switch_on.png</ImageSource>
+    <ImageSource x:Key="ImgRelaysOff">Resources\Images\Service\btn_switch_off.png</ImageSource>
+
+
+    <!-- Settings Control-->
+    <ImageSource x:Key="ImgBtnAzUp">Resources\Images\Buscar\btn_Azl.png</ImageSource>
+    <ImageSource x:Key="ImgBtnAzDown">Resources\Images\Buscar\btn_Azldown.png</ImageSource>
+
+
+</ResourceDictionary>

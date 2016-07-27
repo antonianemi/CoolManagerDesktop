@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B2E44EF-D21E-4B0B-A01C-897B73AEB6FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoolManager</RootNamespace>
+    <AssemblyName>CoolManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CoolManager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Abt.Controls.SciChart.Wpf.2.3, Version=2.3.5130.19364, Culture=neutral, PublicKeyToken=b55dd9efe817e823, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\ABT Software Services Ltd\SciChart v2.3\Lib\net40\Abt.Controls.SciChart.Wpf.2.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ChangesControl.xaml.cs">
+      <DependentUpon>ChangesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomSampleTimeControl.xaml.cs">
+      <DependentUpon>CustomSampleTimeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceListControl.xaml.cs">
+      <DependentUpon>DeviceListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FactorySettingsControl.xaml.cs">
+      <DependentUpon>FactorySettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HelpControl.xaml.cs">
+      <DependentUpon>HelpControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LogsControl.xaml.cs">
+      <DependentUpon>LogsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ModesControl.xaml.cs">
+      <DependentUpon>ModesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MSGControl.xaml.cs">
+      <DependentUpon>MSGControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OkCancelControl.xaml.cs">
+      <DependentUpon>OkCancelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PwdFactorySettingsControl.xaml.cs">
+      <DependentUpon>PwdFactorySettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PwdForDeviceControl.xaml.cs">
+      <DependentUpon>PwdForDeviceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RelaysControl.xaml.cs">
+      <DependentUpon>RelaysControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchControl.xaml.cs">
+      <DependentUpon>SearchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesControl.xaml.cs">
+      <DependentUpon>ServicesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsControl.xaml.cs">
+      <DependentUpon>SettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SynchronizeMouseEvents.cs" />
+    <Compile Include="TemperatureControl.xaml.cs">
+      <DependentUpon>TemperatureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WaitBarControl.xaml.cs">
+      <DependentUpon>WaitBarControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChangesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomSampleTimeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FactorySettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HelpControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LogsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ModesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MSGControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OkCancelControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PwdFactorySettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PwdForDeviceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RelaysControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServicesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TemperatureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WaitBarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Iconos\Icon-29%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Iconos\Icon-76%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Comun\FondoLuz1024x699.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Search_Azl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Search_Vrd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CambioUnidades\c_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CambioUnidades\c_gris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CambioUnidades\f_gris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\CambioUnidades\f_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_DEFROST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TempSetPoint\arr_down_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TempSetPoint\arr_up_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TempSetPoint\arr_up_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\TempSetPoint\arr_down_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_DEFROST_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_DOOROPEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_DOOROPEN_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_TOOLS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Indicators\in_TOOLS_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\btn_ECOAUTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\btn_FOCO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\btn_FOCOoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\ico_EcoAUTO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\ico_FOCO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Modes\ico_FOCOoff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Iconos\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Service\btn_switch_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Service\btn_switch_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Service\btn_factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BgApiDriver\BgApiDriver.csproj">
+      <Project>{f7bbffef-aba1-4650-9975-bf24a9fdb34b}</Project>
+      <Name>BgApiDriver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Iconos\bluetooth-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Send_R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Send_W100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Change_Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Comun\childish_Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="CoolManager.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Azldown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buscar\btn_Azl.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

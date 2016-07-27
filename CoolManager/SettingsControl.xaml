@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="CoolManager.SettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="655">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+
+        <Label x:Name="ChangeButton" Content="Change Name or Password" HorizontalAlignment="Left" Margin="120,54,0,0" VerticalAlignment="Top" Height="50" Width="241" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="ChangeButton_LeftMouseUp" MouseLeftButtonDown="ChangeButton_LeftMouseDown" MouseLeave="ChangeButton_MouseLeave">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgBtnAzUp}"/>
+            </Label.Background>
+        </Label>
+
+        <Label x:Name="SPEnableButton" Content="Enable SP Buttons" HorizontalAlignment="Left" Margin="120,138,0,0" VerticalAlignment="Top" Height="50" Width="241" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="SPEnableButton_LeftMouseUp" MouseLeftButtonDown="SPEnableButton_LeftMouseDown" MouseLeave="SPEnableButton_MouseLeave">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgBtnAzUp}"/>
+            </Label.Background>
+        </Label>
+
+        <Label x:Name="ErasePasswordsButton" Content="Erase Saved Passwords" HorizontalAlignment="Left" Margin="120,222,0,0" VerticalAlignment="Top" Height="50" Width="241" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="ErasePasswordsButton_LeftMouseUp" MouseLeftButtonDown="ErasePasswordsButton_LeftMouseDown" MouseLeave="ErasePasswordsButton_MouseLeave">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgBtnAzUp}"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,184 @@
+﻿<UserControl x:Class="CoolManager.FactorySettingsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="850" Height="520">
+    
+    
+        <Grid Background="#7F000000">
+        <Grid HorizontalAlignment="Left" Height="347" VerticalAlignment="Top" Width="820" Background="#FF211F1F" Margin="10,63,0,0" >
+                <Border BorderBrush="White" BorderThickness="2">
+                    <Grid Margin="0,-2,0,-33">
+                        
+                        <Label Content="SPC" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16"/>
+                        <Label Content="FACTORY SETTINGS" HorizontalAlignment="Left" Margin="345,0,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" FontFamily="Segoe UI Semibold"/>                      
+                        <Label Content="LI SPC" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="LS SPC" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="SID" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.441,-0.516"/>
+                        <Label Content="STD" HorizontalAlignment="Left" Margin="11,175,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="SDIF" HorizontalAlignment="Left" Margin="11,211,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tDI" HorizontalAlignment="Left" Margin="11,242,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="-0.097,0.581" />
+                        <Label Content="tESO" HorizontalAlignment="Left" Margin="273,41,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.5,0.065" />
+                        <Label Content="tDUD" HorizontalAlignment="Left" Margin="273,72,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tDESH" HorizontalAlignment="Left" Margin="273,108,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tDESH2" HorizontalAlignment="Left" Margin="273,139,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="cDESH" HorizontalAlignment="Left" Margin="273,175,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="TMAX" HorizontalAlignment="Left" Margin="273,211,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tRAD" HorizontalAlignment="Left" Margin="273,242,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tDUDM" HorizontalAlignment="Left" Margin="548,41,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tTCC" HorizontalAlignment="Left" Margin="548,72,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="tUD" HorizontalAlignment="Left" Margin="548,108,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="SPSL" HorizontalAlignment="Left" Margin="549,144,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="CALMV" HorizontalAlignment="Left" Margin="548,175,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="Z" HorizontalAlignment="Left" Margin="548,211,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.526,-0.226" />
+                        <Label Content="tGOTEO" HorizontalAlignment="Left" Margin="548,242,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" />
+                        <Label Content="HDF" HorizontalAlignment="Left" Margin="79,303,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.509,-0.065"/>
+                        <Label Content="UNIT" HorizontalAlignment="Left" Margin="305,303,0,0" VerticalAlignment="Top" Foreground="White" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.509,-0.065"/>
+                    
+                    <Grid Margin="0,-63,-22,-30">
+                    <StackPanel Orientation="Horizontal" Margin="75,98,593,339">
+                        <TextBox x:Name="txtSPC" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonSPC_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonSPC_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonSPC_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,132,593,303">
+                        <TextBox x:Name="txtLISPC" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonLISPC_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonLISPC_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonLISPC_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,168,593,269">
+                        <TextBox x:Name="txtLSSPC" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonLSSPC_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonLSSPC_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonLSSPC_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,202,593,235">
+                        <TextBox x:Name="txtSID" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonSID_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonSID_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonSID_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,236,593,201">
+                        <TextBox x:Name="txtSTD" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonSTD_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonSTD_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonSTD_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,270,593,167">
+                        <TextBox x:Name="txtSDIF" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonSDIF_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonSDIF_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonSDIF_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="75,304,593,133">
+                        <TextBox x:Name="txttDI" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontDI_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontDI_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontDI_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,98,329,339">
+                        <TextBox x:Name="txttESO" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontESO_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontESO_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontESO_Set_Click" Background="White" />
+                    </StackPanel>                    
+                    <StackPanel Orientation="Horizontal" Margin="339,132,329,303">
+                        <TextBox x:Name="txttDUD" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontDUD_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontDUD_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontDUD_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,168,329,269">
+                        <TextBox x:Name="txttDESH" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontDESH_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontDESH_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontDESH_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,202,329,235">
+                        <TextBox x:Name="txttDESH2" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontDESH2_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontDESH2_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontDESH2_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,236,329,201">
+                        <TextBox x:Name="txtcDESH" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center"  IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtoncDESH_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtoncDESH_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtoncDESH_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,270,329,167">
+                        <TextBox x:Name="txtTMAX" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" />
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonTMAX_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonTMAX_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonTMAX_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="339,304,329,133">
+                        <TextBox x:Name="txttRAD" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontRAD_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontRAD_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontRAD_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,98,48,339">
+                        <TextBox x:Name="txttDUDM" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontDUDM_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontDUDM_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontDUDM_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,132,48,303">
+                        <TextBox x:Name="txttTCC" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontTCC_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontTCC_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontTCC_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,168,48,269">
+                        <TextBox x:Name="txttUD" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontUD_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontUD_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontUD_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,202,48,235">
+                        <TextBox x:Name="txtSPSL" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonSPSL_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonSPSL_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonSPSL_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,236,48,201">
+                        <TextBox x:Name="txtCALMV" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonCALMV_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonCALMV_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonCALMV_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,270,48,167">
+                        <TextBox x:Name="txtZ" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtonZ_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtonZ_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtonZ_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="620,304,48,133">
+                        <TextBox x:Name="txttGOTEO" Margin="5,5,0,5" Width="50" Text="0" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                        <Button Margin="5,5,0,5"  Content="+" Width="25" Click="ButtontGOTEO_Plus_Click" Background="#FFDED5D5" />
+                        <Button Margin="5,5,0,5" Content="-" Width="25" Click="ButtontGOTEO_Minus_Click" BorderBrush="#FFC5B2B2" Background="#FFDED5D5" Foreground="Black" />
+                        <Button Margin="5,5,0,5" Content="Set" Width="50" Click="ButtontGOTEO_Set_Click" Background="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="123,361,604,71">
+                        <Button x:Name="btnHfdOff" Margin="5,5,0,5"  Content="OFF" Width="53" Click="ButtonHdfOff_Click" Background="Silver" Foreground="White" ForceCursor="True" />
+                        <Button x:Name="btnHfdOn" Margin="0,5,0,5" Content="ON" Width="50" Click="ButtonHdfOn_Click"  Background="DodgerBlue" Foreground="White" ForceCursor="True" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="361,361,366,71">
+                        <Button x:Name="btnUnitC" Margin="5,5,0,5"  Content="°C" Width="53" Click="ButtonUnitC_Click" Background="Silver" Foreground="White" ForceCursor="True" />
+                        <Button x:Name="btnUnitF" Margin="0,5,0,5" Content="°F" Width="50" Click="ButtonUnitF_Click"  Background="DodgerBlue" Foreground="White" ForceCursor="True" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="540,360,80,72">
+                        <Button Margin="0,0,0,0"  Content="Factory Reset" Width="82" Click="ButtontFactoryReset_Click" ForceCursor="True" />
+                        <Button Margin="30,0,0,0"  Content="Read Values" Width="82" Click="ButtontReadValues_Click" ForceCursor="True" />
+                    </StackPanel>
+                    </Grid>
+                </Grid>
+                </Border>
+            </Grid>
+            <Image HorizontalAlignment="Left" Height="63" Margin="771,0,0,0" VerticalAlignment="Top" Width="59" Source="Resources/Images/Iconos/back.png" RenderTransformOrigin="1.017,0.46" MouseLeftButtonUp="Back_ButtonUp"/>
+    </Grid>
+</UserControl>

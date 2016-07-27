@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CoolManager.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="650">
+
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Button Content="Change Name or Password" HorizontalAlignment="Left" Margin="237,84,0,0" VerticalAlignment="Top" Width="171"/>
+        <Button Content="Erase Saved Passwords" HorizontalAlignment="Left" Margin="237,134,0,0" VerticalAlignment="Top" Width="171"/>
+        <Button Content="Enable SP Buttons" HorizontalAlignment="Left" Margin="237,191,0,0" VerticalAlignment="Top" Width="171"/>
+        <Label x:Name="SearchButton" Content="New Search" HorizontalAlignment="Left" Margin="418,217,0,0" VerticalAlignment="Top" Height="50" Width="175" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="SearchButton_LeftMouseUp" MouseLeftButtonDown="SearchButton_LeftMouseDown" MouseLeave="SearchButton_MouseLeave">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgSearchAzul}"/>
+            </Label.Background>
+        </Label>
+
+    </Grid>
+</UserControl>

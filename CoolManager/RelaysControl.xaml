@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="CoolManager.RelaysControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="850" Height="520">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Background="#7F000000">
+        <Grid HorizontalAlignment="Left" Height="352" Margin="110,60,0,0" VerticalAlignment="Top" Width="623" Background="White" >
+            <Border BorderBrush="Black" BorderThickness="1">
+                <Grid Margin="0,-1,0,0">
+                    <Label Content="RELAY STATUS" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" Foreground="Black" Grid.IsSharedSizeScope="True" FontSize="16" RenderTransformOrigin="0.509,-0.065" FontFamily="Segoe UI Semibold"/>
+                    <Image x:Name="ImgCompressor" HorizontalAlignment="Left" Height="100" Margin="48,74,0,0" VerticalAlignment="Top" Width="57" SnapsToDevicePixels="True" Source="{DynamicResource ImgRelaysOff}" RenderTransformOrigin="0.474,0.49" MouseLeftButtonUp="ImgCompressor_ButtonUp"/>
+                    <Image x:Name="ImgLamp" HorizontalAlignment="Left" Height="100" Margin="220,74,0,0" VerticalAlignment="Top" Width="57" SnapsToDevicePixels="True" Source="{DynamicResource ImgRelaysOff}" MouseLeftButtonUp="ImgLamp_ButtonUp" RenderTransformOrigin="1.105,0.04"/>
+                    <Image x:Name="ImgResistor" HorizontalAlignment="Left" Height="100" Margin="48,203,0,0" VerticalAlignment="Top" Width="57" SnapsToDevicePixels="True" Source="{DynamicResource ImgRelaysOff}" MouseLeftButtonUp="ImgResistor_ButtonUp" RenderTransformOrigin="0.965,0.51"/>
+                    <Image x:Name="ImgFan" HorizontalAlignment="Left" Height="100" Margin="220,203,0,0" VerticalAlignment="Top" Width="57" SnapsToDevicePixels="True" Source="{DynamicResource ImgRelaysOff}" MouseLeftButtonUp="ImgFan_ButtonUp" RenderTransformOrigin="0.491,0.24"/>
+                    <Image x:Name="ImgFilter" HorizontalAlignment="Left" Height="100" Margin="434,135,0,0" VerticalAlignment="Top" Width="57" SnapsToDevicePixels="True" Source="{DynamicResource ImgRelaysOff}" MouseLeftButtonUp="ImgFilter_ButtonUp" RenderTransformOrigin="-0.368,0.48"/>
+                    <Label Content="Compressor" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Lamp" HorizontalAlignment="Left" Margin="172,41,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Resistor" HorizontalAlignment="Left" Margin="23,174,0,0" VerticalAlignment="Top" Height="45" Width="112" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Fan" HorizontalAlignment="Left" Margin="172,174,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Filter" HorizontalAlignment="Left" Margin="393,95,0,0" VerticalAlignment="Top" Height="40" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Input Voltage:" HorizontalAlignment="Left" Margin="23,303,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label Content="Light Sensor:" HorizontalAlignment="Left" Margin="330,303,0,0" VerticalAlignment="Top" Height="45" Width="140" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label x:Name="ValueVoltage" Content="---" HorizontalAlignment="Left" Margin="168,303,0,0" VerticalAlignment="Top" Height="45" Width="65" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Label x:Name="ValueLight" Content="---" HorizontalAlignment="Left" Margin="470,303,0,0" VerticalAlignment="Top" Height="45" Width="65" FontFamily="Segoe UI Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" RenderTransformOrigin="0.521,3.733"/>
+                    <Image HorizontalAlignment="Left" Height="63" Margin="660,-58,-98,0" VerticalAlignment="Top" Width="59" Source="Resources/Images/Iconos/back.png" RenderTransformOrigin="1.017,0.46" MouseLeftButtonUp="Back_ButtonUp"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="413,59,0,0" VerticalAlignment="Top" Height="36" Width="94" MouseDoubleClick="EnableFactorySettings_DoubleClick"/>
+                    <Image x:Name="ImgFactorySettings" HorizontalAlignment="Left" Height="39" Margin="571,312,0,0" VerticalAlignment="Top" Width="50" Source="Resources/Images/Service/btn_factory.png" IsEnabled="False" MouseLeftButtonUp="FactorySettings_ButtonUp"/>
+                </Grid>
+            </Border>
+        </Grid>        
+    </Grid>
+    
+</UserControl>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CoolManager.SearchControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Width="655" Height="350">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid HorizontalAlignment="Left" Width="655">
+        <Label x:Name="SearchButton" Content="New Search" HorizontalAlignment="Left" Margin="418,217,0,0" VerticalAlignment="Top" Height="50" Width="175" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" MouseLeftButtonUp="SearchButton_LeftMouseUp" MouseLeftButtonDown="SearchButton_LeftMouseDown" MouseLeave="SearchButton_MouseLeave">
+            <Label.Background>
+                <ImageBrush ImageSource="{DynamicResource ImgSearchAzul}"/>
+            </Label.Background>
+        </Label>
+        <Grid x:Name="GridConnectionInfo" HorizontalAlignment="Left" Height="79" Margin="78,105,0,0" VerticalAlignment="Top" Width="447" Background="White">
+            <Line X1="0" Y1="30"  X2="450" Y2="30" Stroke="DeepSkyBlue" StrokeThickness="2" />
+            <Label Content="Connected with:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="267" FontFamily="Segoe UI Semibold" FontSize="14"/>
+            <Label x:Name="ValueDeviceName" Content="Device Name" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2,-0.231" Width="267" FontFamily="Segoe UI Light" FontSize="14"/>
+            <Label x:Name="ValueDeviceAddress" Content="AA:BB:CC:DD:EE:FF" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="267" FontFamily="Segoe UI Light" FontSize="14" Height="26"/>
+            <Grid x:Name="ButtonChange" Margin="331,33,0,3" MouseLeftButtonUp="ChangeButton_LeftMouseUp">
+                <Image Source="{DynamicResource ImgSearchChange}" Margin="3,0,-3,0"/>
+                <Label Content="Exit" HorizontalAlignment="Left" VerticalAlignment="Top" Height="33" Width="106" VerticalContentAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="15" Foreground="White" RenderTransformOrigin="0.852,0.463" HorizontalContentAlignment="Center" Margin="16,3,0,0" />                
+            </Grid>
+        </Grid>
+    </Grid>
+
+</UserControl>
